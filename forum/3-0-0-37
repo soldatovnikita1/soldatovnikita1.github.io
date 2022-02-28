@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Форум</title>
+		<link>http://lehrer.3dn.ru/forum/</link>
+		<description>Форум</description>
+
+		<lastBuildDate>Thu, 20 Jan 2011 15:01:38 GMT</lastBuildDate>
+		<generator>uCoz Web-Service</generator>
+		<atom:link href="http://lehrer.3dn.ru/forum/rss" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Условия обучения</title>
+			<link>http://lehrer.3dn.ru/forum/5-1-1</link>
+			<pubDate>Thu, 20 Jan 2011 15:01:38 GMT</pubDate>
+			<description>Форум: &lt;a href=&quot;http://lehrer.3dn.ru/forum/5&quot;&gt;Задай вопрос замдиректору по учебной работе&lt;/a&gt;&lt;br /&gt;Автор темы: RADO&lt;br /&gt;Автор последнего сообщения: RADO&lt;br /&gt;Количество ответов: 0</description>
+			<content:encoded>Какие условия у Вас созданы для обучения детей?</content:encoded>
+			<category>Задай вопрос замдиректору по учебной работе</category>
+			<dc:creator>RADO</dc:creator>
+			<guid>http://lehrer.3dn.ru/forum/5-1-1</guid>
+		</item>
+	</channel>
+</rss>

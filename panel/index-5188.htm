@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Календарь</title>
+		<style>
+			body,td {font-size:11px; font-family:verdana,arial,helvetica;}
+			.tdmark, .tdmark a:link, .tdmark a:visited {color: black; background: #b5c4e1; text-align: right; font-weight: bold;}
+			.tdpres, .tdpres a:link, .tdpres a:visited {background: #d1dbed; color: black; text-align: right;}
+			.tdnpres {background: #e6e8ea; color: #a0a0a0; text-align: right;}
+			.tdempty {background: white; text-align: right;}
+			.tdwday {color: white; text-align: center; font-weight: bold;}
+			.tdweekpres, .tdweekpres a:link, .tdweekpres a:visited {color: black; font-weight: bold; padding-right: 1px;}
+			.tdweeknpres {color: #989898; padding-right: 1px;}
+			body {background:#F9F9F9;}
+		</style>
+		<script><!--
+			function updateCalendar(f) {
+				a = '';
+				sep = '?';
+				for (i=0; i<f.elements.length; i++) {
+					if (!f.elements[i].name || f.elements[i].name.length==0) continue;
+					if (f.elements[i].type=='checkbox' && !f.elements[i].checked) continue;
+					a += sep+f.elements[i].name+'='+f.elements[i].value;
+					sep = ';';
+				}
+				adr = f.action;
+				i = adr.indexOf('?');
+				if (i >= 0) adr = adr.substr(0, i);
+				adr += a;
+				if (window.opener && !window.opener.closed) {
+					window.opener.location.href = adr;
+				} else {
+					w = window.open(adr, 'ucozcmain') || _uWnd.alert('Отключите блокировку всплывающих (Pop-up) окон!', '', {w:230, h:80, tm:3000});
+				}
+				window.location.href = adr+';l=cal';
+				return false;
+			}
+
+			function updateCalendarA(a) {
+				if (window.opener && !window.opener.closed) {
+					window.opener.location.href = a.href;
+				} else {
+					window.open(a.href, 'ucozcmain') || _uWnd.alert('Отключите блокировку всплывающих (Pop-up) окон!', '', {w:230, h:80, tm:3000});
+				}
+				window.location.href = a.href+';l=cal';
+				return false;
+			}
+		//--></script>
+	</head>
+	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="10" marginheight="0" marginwidth="0">
+		<table border="0" width="100%" height="100%">
+			<tr>
+				<td align="center" valign="middle">
+					
+	<form action="http://lehrer.3dn.ru/panel/" target="ucozcmain" onsubmit="return updateCalendar(this)">
+<input type="hidden" name="a" value="ustat">
+<input type="hidden" name="d" value="4">
+<input type="hidden" name="z" value="ch">
+<input type="hidden" name="u" value="lehrer">
+		<table border="0" cellspacing="4">
+		<tr><td valign="top" align="center">
+				<table style="border: 1px solid #8ca3d2;" border="0" cellspacing="1">
+				<tr><td style="color: black; border-bottom: 1px solid #8ca3d2; background: #d0f0d0" align="center" colspan="7"><b>Январь,&nbsp;2022</b></td></tr><tr>
+					<td width="40" class="tdwday" bgcolor="#b7bdc5">Пн
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Вт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Ср
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Чт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Пт
+					</td><td width="40" class="tdwday" bgcolor="#9ca8d8">Сб
+					</td><td width="40" class="tdwday" bgcolor="#8ca3d2">Вс</td></tr><tr><td class="tdempty"></td><td class="tdempty"></td><td class="tdempty"></td><td class="tdempty"></td><td class="tdempty"></td><td class="tdnpres">1</td><td class="tdnpres">2</td></tr><tr><td class="tdnpres">3</td><td class="tdnpres">4</td><td class="tdnpres">5</td><td class="tdnpres">6</td><td class="tdnpres">7</td><td class="tdnpres">8</td><td class="tdnpres">9</td></tr><tr><td class="tdnpres">10</td><td class="tdnpres">11</td><td class="tdnpres">12</td><td class="tdnpres">13</td><td class="tdnpres">14</td><td class="tdnpres">15</td><td class="tdmark"><a target="ucozcmain" href="index-498.htm?a=ustat;u=lehrer;d=4;z=ch;s=7685" onclick="return updateCalendarA(this)">16</a><input type="checkbox" name="s" checked="" value="7685"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-499.htm?a=ustat;u=lehrer;d=4;z=ch;s=7686" onclick="return updateCalendarA(this)">17</a><input type="checkbox" name="s" value="7686"></td><td class="tdpres"><a target="ucozcmain" href="index-500.htm?a=ustat;u=lehrer;d=4;z=ch;s=7687" onclick="return updateCalendarA(this)">18</a><input type="checkbox" name="s" value="7687"></td><td class="tdpres"><a target="ucozcmain" href="index-501.htm?a=ustat;u=lehrer;d=4;z=ch;s=7688" onclick="return updateCalendarA(this)">19</a><input type="checkbox" name="s" value="7688"></td><td class="tdpres"><a target="ucozcmain" href="index-502.htm?a=ustat;u=lehrer;d=4;z=ch;s=7689" onclick="return updateCalendarA(this)">20</a><input type="checkbox" name="s" value="7689"></td><td class="tdpres"><a target="ucozcmain" href="index-503.htm?a=ustat;u=lehrer;d=4;z=ch;s=7690" onclick="return updateCalendarA(this)">21</a><input type="checkbox" name="s" value="7690"></td><td class="tdpres"><a target="ucozcmain" href="index-504.htm?a=ustat;u=lehrer;d=4;z=ch;s=7691" onclick="return updateCalendarA(this)">22</a><input type="checkbox" name="s" value="7691"></td><td class="tdpres"><a target="ucozcmain" href="index-505.htm?a=ustat;u=lehrer;d=4;z=ch;s=7692" onclick="return updateCalendarA(this)">23</a><input type="checkbox" name="s" value="7692"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-506.htm?a=ustat;u=lehrer;d=4;z=ch;s=7693" onclick="return updateCalendarA(this)">24</a><input type="checkbox" name="s" value="7693"></td><td class="tdpres"><a target="ucozcmain" href="index-507.htm?a=ustat;u=lehrer;d=4;z=ch;s=7694" onclick="return updateCalendarA(this)">25</a><input type="checkbox" name="s" value="7694"></td><td class="tdpres"><a target="ucozcmain" href="index-508.htm?a=ustat;u=lehrer;d=4;z=ch;s=7695" onclick="return updateCalendarA(this)">26</a><input type="checkbox" name="s" value="7695"></td><td class="tdpres"><a target="ucozcmain" href="index-509.htm?a=ustat;u=lehrer;d=4;z=ch;s=7696" onclick="return updateCalendarA(this)">27</a><input type="checkbox" name="s" value="7696"></td><td class="tdpres"><a target="ucozcmain" href="index-510.htm?a=ustat;u=lehrer;d=4;z=ch;s=7697" onclick="return updateCalendarA(this)">28</a><input type="checkbox" name="s" value="7697"></td><td class="tdpres"><a target="ucozcmain" href="index-511.htm?a=ustat;u=lehrer;d=4;z=ch;s=7698" onclick="return updateCalendarA(this)">29</a><input type="checkbox" name="s" value="7698"></td><td class="tdpres"><a target="ucozcmain" href="index-512.htm?a=ustat;u=lehrer;d=4;z=ch;s=7699" onclick="return updateCalendarA(this)">30</a><input type="checkbox" name="s" value="7699"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-513.htm?a=ustat;u=lehrer;d=4;z=ch;s=7700" onclick="return updateCalendarA(this)">31</a><input type="checkbox" name="s" value="7700"></td></tr></table></td></tr>
+		<tr><td valign="top" align="center">
+				<table style="border: 1px solid #8ca3d2;" border="0" cellspacing="1">
+				<tr><td style="color: black; border-bottom: 1px solid #8ca3d2; background: #d0f0d0" align="center" colspan="7"><b>Февраль,&nbsp;2022</b></td></tr><tr>
+					<td width="40" class="tdwday" bgcolor="#b7bdc5">Пн
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Вт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Ср
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Чт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Пт
+					</td><td width="40" class="tdwday" bgcolor="#9ca8d8">Сб
+					</td><td width="40" class="tdwday" bgcolor="#8ca3d2">Вс</td></tr><tr><td class="tdempty"></td><td class="tdpres"><a target="ucozcmain" href="index-514.htm?a=ustat;u=lehrer;d=4;z=ch;s=7701" onclick="return updateCalendarA(this)">1</a><input type="checkbox" name="s" value="7701"></td><td class="tdpres"><a target="ucozcmain" href="index-515.htm?a=ustat;u=lehrer;d=4;z=ch;s=7702" onclick="return updateCalendarA(this)">2</a><input type="checkbox" name="s" value="7702"></td><td class="tdpres"><a target="ucozcmain" href="index-516.htm?a=ustat;u=lehrer;d=4;z=ch;s=7703" onclick="return updateCalendarA(this)">3</a><input type="checkbox" name="s" value="7703"></td><td class="tdpres"><a target="ucozcmain" href="index-517.htm?a=ustat;u=lehrer;d=4;z=ch;s=7704" onclick="return updateCalendarA(this)">4</a><input type="checkbox" name="s" value="7704"></td><td class="tdpres"><a target="ucozcmain" href="index-518.htm?a=ustat;u=lehrer;d=4;z=ch;s=7705" onclick="return updateCalendarA(this)">5</a><input type="checkbox" name="s" value="7705"></td><td class="tdpres"><a target="ucozcmain" href="index-519.htm?a=ustat;u=lehrer;d=4;z=ch;s=7706" onclick="return updateCalendarA(this)">6</a><input type="checkbox" name="s" value="7706"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-520.htm?a=ustat;u=lehrer;d=4;z=ch;s=7707" onclick="return updateCalendarA(this)">7</a><input type="checkbox" name="s" value="7707"></td><td class="tdpres"><a target="ucozcmain" href="index-521.htm?a=ustat;u=lehrer;d=4;z=ch;s=7708" onclick="return updateCalendarA(this)">8</a><input type="checkbox" name="s" value="7708"></td><td class="tdpres"><a target="ucozcmain" href="index-522.htm?a=ustat;u=lehrer;d=4;z=ch;s=7709" onclick="return updateCalendarA(this)">9</a><input type="checkbox" name="s" value="7709"></td><td class="tdpres"><a target="ucozcmain" href="index-523.htm?a=ustat;u=lehrer;d=4;z=ch;s=7710" onclick="return updateCalendarA(this)">10</a><input type="checkbox" name="s" value="7710"></td><td class="tdpres"><a target="ucozcmain" href="index-524.htm?a=ustat;u=lehrer;d=4;z=ch;s=7711" onclick="return updateCalendarA(this)">11</a><input type="checkbox" name="s" value="7711"></td><td class="tdpres"><a target="ucozcmain" href="index-525.htm?a=ustat;u=lehrer;d=4;z=ch;s=7712" onclick="return updateCalendarA(this)">12</a><input type="checkbox" name="s" value="7712"></td><td class="tdpres"><a target="ucozcmain" href="index-526.htm?a=ustat;u=lehrer;d=4;z=ch;s=7713" onclick="return updateCalendarA(this)">13</a><input type="checkbox" name="s" value="7713"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-527.htm?a=ustat;u=lehrer;d=4;z=ch;s=7714" onclick="return updateCalendarA(this)">14</a><input type="checkbox" name="s" value="7714"></td><td class="tdpres"><a target="ucozcmain" href="index-528.htm?a=ustat;u=lehrer;d=4;z=ch;s=7715" onclick="return updateCalendarA(this)">15</a><input type="checkbox" name="s" value="7715"></td><td class="tdpres"><a target="ucozcmain" href="index-529.htm?a=ustat;u=lehrer;d=4;z=ch;s=7716" onclick="return updateCalendarA(this)">16</a><input type="checkbox" name="s" value="7716"></td><td class="tdpres"><a target="ucozcmain" href="index-530.htm?a=ustat;u=lehrer;d=4;z=ch;s=7717" onclick="return updateCalendarA(this)">17</a><input type="checkbox" name="s" value="7717"></td><td class="tdpres"><a target="ucozcmain" href="index-531.htm?a=ustat;u=lehrer;d=4;z=ch;s=7718" onclick="return updateCalendarA(this)">18</a><input type="checkbox" name="s" value="7718"></td><td class="tdpres"><a target="ucozcmain" href="index-532.htm?a=ustat;u=lehrer;d=4;z=ch;s=7719" onclick="return updateCalendarA(this)">19</a><input type="checkbox" name="s" value="7719"></td><td class="tdpres"><a target="ucozcmain" href="index-533.htm?a=ustat;u=lehrer;d=4;z=ch;s=7720" onclick="return updateCalendarA(this)">20</a><input type="checkbox" name="s" value="7720"></td></tr><tr><td class="tdpres"><a target="ucozcmain" href="index-534.htm?a=ustat;u=lehrer;d=4;z=ch;s=7721" onclick="return updateCalendarA(this)">21</a><input type="checkbox" name="s" value="7721"></td><td class="tdpres"><a target="ucozcmain" href="index-535.htm?a=ustat;u=lehrer;d=4;z=ch;s=7722" onclick="return updateCalendarA(this)">22</a><input type="checkbox" name="s" value="7722"></td><td class="tdpres"><a target="ucozcmain" href="index-63.htm?a=ustat;u=lehrer;d=4;z=ch;s=7723" onclick="return updateCalendarA(this)">23</a><input type="checkbox" name="s" value="7723"></td><td class="tdpres"><a target="ucozcmain" href="index-536.htm?a=ustat;u=lehrer;d=4;z=ch;s=7724" onclick="return updateCalendarA(this)">24</a><input type="checkbox" name="s" value="7724"></td><td class="tdnpres">25</td><td class="tdnpres">26</td><td class="tdnpres">27</td></tr><tr><td class="tdnpres">28</td></tr></table></td></tr>
+		<tr><td valign="top" align="center">
+				<table style="border: 1px solid #8ca3d2;" border="0" cellspacing="1">
+				<tr><td style="color: black; border-bottom: 1px solid #8ca3d2; background: #d0f0d0" align="center" colspan="7"><b>Март,&nbsp;2022</b></td></tr><tr>
+					<td width="40" class="tdwday" bgcolor="#b7bdc5">Пн
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Вт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Ср
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Чт
+					</td><td width="40" class="tdwday" bgcolor="#b7bdc5">Пт
+					</td><td width="40" class="tdwday" bgcolor="#9ca8d8">Сб
+					</td><td width="40" class="tdwday" bgcolor="#8ca3d2">Вс</td></tr><tr><td class="tdempty"></td><td class="tdnpres">1</td><td class="tdnpres">2</td><td class="tdnpres">3</td><td class="tdnpres">4</td><td class="tdnpres">5</td><td class="tdnpres">6</td></tr><tr><td class="tdnpres">7</td><td class="tdnpres">8</td><td class="tdnpres">9</td><td class="tdnpres">10</td><td class="tdnpres">11</td><td class="tdnpres">12</td><td class="tdnpres">13</td></tr><tr><td class="tdnpres">14</td><td class="tdnpres">15</td><td class="tdnpres">16</td><td class="tdnpres">17</td><td class="tdnpres">18</td><td class="tdnpres">19</td><td class="tdnpres">20</td></tr><tr><td class="tdnpres">21</td><td class="tdnpres">22</td><td class="tdnpres">23</td><td class="tdnpres">24</td><td class="tdnpres">25</td><td class="tdnpres">26</td><td class="tdnpres">27</td></tr><tr><td class="tdnpres">28</td><td class="tdnpres">29</td><td class="tdnpres">30</td><td class="tdnpres">31</td></tr></table></td></tr>
+		<tr><td align="center"><input class="button" type="submit" value="Показать"></td></tr>
+		<tr><td align="center" height="25" valign="bottom"><a href="javascript: window.close()">&laquo; Закрыть окно &raquo;</a></td></tr>
+		</table>
+	</form>
+
+	<script>
+	window.resizeTo(330, 550);
+	window.focus();
+	</script>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

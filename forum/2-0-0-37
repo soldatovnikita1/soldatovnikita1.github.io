@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Форум</title>
+		<link>http://lehrer.3dn.ru/forum/</link>
+		<description>Форум</description>
+
+		
+		<generator>uCoz Web-Service</generator>
+		<atom:link href="http://lehrer.3dn.ru/forum/rss" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

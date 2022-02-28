@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Календарь</title>
+		<style>
+			body,td {font-size:11px; font-family:verdana,arial,helvetica;}
+			.tdmark, .tdmark a:link, .tdmark a:visited {color: black; background: #b5c4e1; text-align: right; font-weight: bold;}
+			.tdpres, .tdpres a:link, .tdpres a:visited {background: #d1dbed; color: black; text-align: right;}
+			.tdnpres {background: #e6e8ea; color: #a0a0a0; text-align: right;}
+			.tdempty {background: white; text-align: right;}
+			.tdwday {color: white; text-align: center; font-weight: bold;}
+			.tdweekpres, .tdweekpres a:link, .tdweekpres a:visited {color: black; font-weight: bold; padding-right: 1px;}
+			.tdweeknpres {color: #989898; padding-right: 1px;}
+			body {background:#F9F9F9;}
+		</style>
+		<script><!--
+			function updateCalendar(f) {
+				a = '';
+				sep = '?';
+				for (i=0; i<f.elements.length; i++) {
+					if (!f.elements[i].name || f.elements[i].name.length==0) continue;
+					if (f.elements[i].type=='checkbox' && !f.elements[i].checked) continue;
+					a += sep+f.elements[i].name+'='+f.elements[i].value;
+					sep = ';';
+				}
+				adr = f.action;
+				i = adr.indexOf('?');
+				if (i >= 0) adr = adr.substr(0, i);
+				adr += a;
+				if (window.opener && !window.opener.closed) {
+					window.opener.location.href = adr;
+				} else {
+					w = window.open(adr, 'ucozcmain') || _uWnd.alert('Отключите блокировку всплывающих (Pop-up) окон!', '', {w:230, h:80, tm:3000});
+				}
+				window.location.href = adr+';l=cal';
+				return false;
+			}
+
+			function updateCalendarA(a) {
+				if (window.opener && !window.opener.closed) {
+					window.opener.location.href = a.href;
+				} else {
+					window.open(a.href, 'ucozcmain') || _uWnd.alert('Отключите блокировку всплывающих (Pop-up) окон!', '', {w:230, h:80, tm:3000});
+				}
+				window.location.href = a.href+';l=cal';
+				return false;
+			}
+		//--></script>
+	</head>
+	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="10" marginheight="0" marginwidth="0">
+		<table border="0" width="100%" height="100%">
+			<tr>
+				<td align="center" valign="middle">
+					<form action="http://lehrer.3dn.ru/panel/" target="ucozcmain" onsubmit="return updateCalendar(this)"><input type="hidden" name="u" value="lehrer"><input type="hidden" name="d" value="4"><input type="hidden" name="x" value="m"><input type="hidden" name="z" value="e"><input type="hidden" name="a" value="ustat"><table border="0" cellspacing="1" cellpadding="0">
+	<tr><td class="tdwday" bgcolor="#b7bdc5" width="50">Дни</td>
+		<td width="100" class="tdwday" bgcolor="#b7bdc5">Месяц</td>
+		<td></td></tr>
+	<tr align="center"><td bgcolor="#d0f0d0"></td>
+		<td bgcolor="#d0f0d0"><b>2020</b></td><td></td>
+			</tr><tr><td class="tdnpres"></td>
+				<td class="tdnpres" style="text-align:center">Сентябрь</td>
+				<td></td></tr>
+			<tr><td class="tdnpres"></td>
+				<td class="tdnpres" style="text-align:center">Октябрь</td>
+				<td></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-30</td>
+				<td><a target="ucozcmain" href="index-1811.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=238" onclick="return updateCalendarA(this)">Ноябрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="238"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1812.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=239" onclick="return updateCalendarA(this)">Декабрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="239"></td></tr>
+			<tr align="center"><td bgcolor="#d0f0d0"></td>
+				<td bgcolor="#d0f0d0"><b>2021</b>
+				</td><td></td>
+			</tr><tr style="text-align:center" class="tdmark"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1813.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=240" onclick="return updateCalendarA(this)">Январь</a></td><td class="tdmark"><input type="checkbox" name="s" checked="" value="240"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-28</td>
+				<td><a target="ucozcmain" href="index-1814.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=241" onclick="return updateCalendarA(this)">Февраль</a></td><td class="tdpres"><input type="checkbox" name="s" value="241"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1815.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=242" onclick="return updateCalendarA(this)">Март</a></td><td class="tdpres"><input type="checkbox" name="s" value="242"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-30</td>
+				<td><a target="ucozcmain" href="index-1816.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=243" onclick="return updateCalendarA(this)">Апрель</a></td><td class="tdpres"><input type="checkbox" name="s" value="243"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1817.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=244" onclick="return updateCalendarA(this)">Май</a></td><td class="tdpres"><input type="checkbox" name="s" value="244"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-30</td>
+				<td><a target="ucozcmain" href="index-1818.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=245" onclick="return updateCalendarA(this)">Июнь</a></td><td class="tdpres"><input type="checkbox" name="s" value="245"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1819.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=246" onclick="return updateCalendarA(this)">Июль</a></td><td class="tdpres"><input type="checkbox" name="s" value="246"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1820.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=247" onclick="return updateCalendarA(this)">Август</a></td><td class="tdpres"><input type="checkbox" name="s" value="247"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-30</td>
+				<td><a target="ucozcmain" href="index-1821.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=248" onclick="return updateCalendarA(this)">Сентябрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="248"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1822.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=249" onclick="return updateCalendarA(this)">Октябрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="249"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-30</td>
+				<td><a target="ucozcmain" href="index-1823.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=250" onclick="return updateCalendarA(this)">Ноябрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="250"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1824.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=251" onclick="return updateCalendarA(this)">Декабрь</a></td><td class="tdpres"><input type="checkbox" name="s" value="251"></td></tr>
+			<tr align="center"><td bgcolor="#d0f0d0"></td>
+				<td bgcolor="#d0f0d0"><b>2022</b>
+				</td><td></td>
+			</tr><tr style="text-align:center" class="tdpres"><td>1-31</td>
+				<td><a target="ucozcmain" href="index-1825.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=252" onclick="return updateCalendarA(this)">Январь</a></td><td class="tdpres"><input type="checkbox" name="s" value="252"></td></tr>
+			<tr style="text-align:center" class="tdpres"><td>1-24</td>
+				<td><a target="ucozcmain" href="index-1826.htm?a=ustat;u=lehrer;d=4;x=m;z=e;s=253" onclick="return updateCalendarA(this)">Февраль</a></td><td class="tdpres"><input type="checkbox" name="s" value="253"></td></tr>
+			<tr><td class="tdnpres"></td>
+				<td class="tdnpres" style="text-align:center">Март</td>
+				<td></td></tr>
+			<tr><td class="tdnpres"></td>
+				<td class="tdnpres" style="text-align:center">Апрель</td>
+				<td></td></tr>
+	<tr><td colspan="8">
+			<table cellspacing="4" width="100%" border="0">
+			<tr><td align="center"><input class="button" type="submit" value="Показать"></td></tr>
+			<tr><td align="center" height="20" valign="bottom"><a href="javascript: window.close()">&laquo; Закрыть окно &raquo;</a></td></tr>
+			</table>
+		</td></tr>
+	</table>
+	</form>
+
+	<script>
+	window.resizeTo(220,500);
+	window.focus();
+	</script>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
